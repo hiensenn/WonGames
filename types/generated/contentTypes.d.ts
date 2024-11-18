@@ -582,6 +582,7 @@ export interface ApiPlatformPlatform extends Struct.CollectionTypeSchema {
 export interface ApiPublisherPublisher extends Struct.CollectionTypeSchema {
   collectionName: 'publishers';
   info: {
+    description: '';
     displayName: 'publisher';
     pluralName: 'publishers';
     singularName: 'publisher';
@@ -602,7 +603,7 @@ export interface ApiPublisherPublisher extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    slg: Schema.Attribute.UID<'name'>;
+    slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
